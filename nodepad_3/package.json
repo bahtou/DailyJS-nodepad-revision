@@ -1,0 +1,12 @@
+{
+  "name": "nodepad_part3",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/app"
+  },
+  "dependencies": {
+    "express": "3.0.0rc2",
+    "jade": "*"
+  }
+}

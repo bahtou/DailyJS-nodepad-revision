@@ -1,0 +1,17 @@
+extends ../../layout
+
+block content
+  h2 New Document
+  p
+    a(href='/admin/documents')
+      &larr; back to Documents
+  form(method='post', action='/admin/documents')
+    div
+      h3 Title
+      input(id='title', name='document[title]', type='text')
+    div
+      h3 Note
+      div
+        textarea(id='data', name='document[data]', type='text')
+    div
+      button Submit

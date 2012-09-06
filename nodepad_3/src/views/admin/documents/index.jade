@@ -1,0 +1,14 @@
+extends ../../layout
+
+block content
+  h1 My documents landing page.
+  p
+    a(href="/admin/documents/new") New Document
+  ul
+  - each doc in docs
+      li
+        a(href='/admin/documents/' + doc._id + '/edit') Edit
+        span -
+        a(href='/admin/documents/' + doc._id + '.delete') Delete
+        span -
+        a(href='/documents/' + doc._id) #{doc.title}

@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h2=doc.title
+  p
+    a(href='/admin/documents')
+      &larr; back to Documents
+  p=doc.data
+  a(href='/admin/documents/' + doc._id + '/edit') Edit

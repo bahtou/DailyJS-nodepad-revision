@@ -1,0 +1,15 @@
+extends layout
+
+append scripts
+  script(src='/javascripts/countDownRedirect.js')
+
+block content
+  h1= title
+
+  p Redirecting you to your documents in
+      div#countdown_text
+      b  10
+
+  div
+    button.start_countdown#start Start Countdown
+    button.end_countdown#end End Countdown

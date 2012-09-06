@@ -1,0 +1,17 @@
+extends ../../layout
+
+append scripts
+  script(src="/javascripts/documents/edit.js")
+
+block content
+  form( id='form', action='/admin/documents/' + doc._id)
+    h3 Title
+    input( id='title', name='title', type='text', value=doc.title )
+
+    h3 Note
+    textarea( id='data', name='data' )
+      !{doc.data}
+
+    br
+    button.submit( data-id="#{doc._id}") Submit
+    button.delete( data-id="#{doc._id}") Delete

@@ -1,0 +1,9 @@
+h1 Your Documents
+
+p
+  a(href='/admin/documents/new') New Document
+ul
+- for (var d in documents)
+    li.first: a(href='/documents/' + documents[d]._id + '/edit') Edit
+    li: a(href='/documents' + documents[d]._id) Delete
+    li.last: a(href='/documents/' + documents[d]._id)=documents[d].title
